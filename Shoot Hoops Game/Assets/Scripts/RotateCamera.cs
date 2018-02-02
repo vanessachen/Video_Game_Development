@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour {
 
+	public float mouseSpeed = 3.0f;
 	 //Use this for initialization
 	void Start () {
 		//Transform t = GetComponent<Transform> (); //name a var t that gets the transform component of the camera
@@ -15,11 +16,13 @@ public class RotateCamera : MonoBehaviour {
 	void Update () {
 		//transform.rotation = transform.rotation * Quaternion.Euler (0,1,0);
 		float mouseX = Input.GetAxis("Mouse X");
-		transform.rotation = transform.rotation * Quaternion.Euler (0, mouseX, 0);
+		transform.rotation = transform.rotation * Quaternion.Euler (0, mouseX*mouseSpeed, 0); //must multiply Quaternion to get rotation
+	
 		float mouseY = Input.GetAxis("Mouse Y"); //we just want to tilt the 'head' of the player 
 
 		Camera camera = GetComponentInChildren<Camera>(); //creating a var 'camera' of type Camera, and getting the child component of the player (which is the camera)
-		camera.transform.rotation = camera.transform.rotation * Quaternion.Euler (mouseY,0,0);//moving camera head based on camera rotation
+		//.rotation is relative to the entire game, not to the camera - we want to modify local location 
+		camera.transform.localRotation = camera.transform.localRotation * Quaternion.Euler (-mouseY*mouseSpeed,0,0);//moving camera head based on camera rotation
 	}
 
 
