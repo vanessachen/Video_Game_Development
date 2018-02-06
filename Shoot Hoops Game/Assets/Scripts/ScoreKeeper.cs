@@ -5,10 +5,10 @@ using UnityEngine;
 public class ScoreKeeper : MonoBehaviour {
 
 	public int score = 0;
-	public int addScore = 2;
+	//public int addScore = 2;
 
-	public void IncrementScore(){
-		score = score + addScore;
+	public void IncrementScore(int amount){
+		score = score + amount;
 		print ("This is your current score: " + score);
 	}
 
