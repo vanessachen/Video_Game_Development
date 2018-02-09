@@ -25,7 +25,8 @@ public class BallSpawner : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			Rigidbody rb = createBall (); //create a new instance of the ball each time
 			//Camera camera = GetComponentInChildren<Camera>();
-			rb.velocity = transform.localRotation * Vector3.forward * ballSpeed; //sets the velocity to be in the direction of the rotation of the player
+			Camera camera = GetComponentInChildren<Camera>(); 
+			rb.velocity = camera.transform.rotation * Vector3.forward * ballSpeed; //sets the velocity to be in the direction of the rotation of the player
 			//print ("I am moving forward");
 			//if (rb.position.y >= maxFallDistance){
 				//Destroy(gameObject);

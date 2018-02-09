@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/02_ShootHoops.unity
     guid: f1e70a6a8088c48b48207c77265900b6
+  - enabled: 1
+    path: Assets/Scenes/03_GameOver.unity
+    guid: ab2daca70b6334813b78cd6c7b3a3996
