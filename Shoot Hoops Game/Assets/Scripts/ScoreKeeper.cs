@@ -15,7 +15,8 @@ public class ScoreKeeper : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		//want score data to persist between scenes
+		DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame

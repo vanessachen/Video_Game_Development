@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour {
 
-	public float mouseSpeed = 3.0f;
+	public float mouseSpeed = 8.0f;
 	 //Use this for initialization
 	void Start () {
 		//Transform t = GetComponent<Transform> (); //name a var t that gets the transform component of the camera
