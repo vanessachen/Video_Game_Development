@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 1411212}
   - component: {fileID: 1411211}
   m_Layer: 5
-  m_Name: Score
+  m_Name: GameOverScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1411209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6ac720d56e743f4bef9cc924553dcf, type: 3}
+  m_Script: {fileID: 11500000, guid: ec68dbf8e378c4dfb8fea1458cd5ba16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1411212
